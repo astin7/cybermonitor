@@ -7,7 +7,6 @@
   --color-cyber-blue: #49cbe3;       
   --color-cyber-blue-dim: #0077b6;   
   
-  /* Blue Glow Effects */
   --shadow-glow: 0 0 20px rgba(0, 168, 255, 0.4);
   --shadow-glow-hover: 0 0 40px rgba(0, 168, 255, 0.6);
 }

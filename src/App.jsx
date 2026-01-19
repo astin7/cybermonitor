@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom'; // Combined Link here
+import { Routes, Route, Link } from 'react-router-dom';
 import { useForm, ValidationError } from '@formspree/react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { 
   Shield, Cpu, Activity, Mail, Download, CheckCircle, 
   Zap, Layers, Crosshair, Menu, X 
-} from 'lucide-react'; // Combined all icons here
+} from 'lucide-react';
 import logo from './assets/cybermonitor-logo.ico';
 
 // --- CONFIGURATION ---
@@ -13,7 +13,6 @@ const DOWNLOAD_LINK = "https://github.com/astin7/cybermonitor-project/releases/d
 const FORMSPREE_ID = "mbddozwn";
 
 // --- COMPONENTS ---
-
 const Navbar = () => (
   <nav className="fixed top-0 w-full bg-[#1a1a1a]/95 backdrop-blur-md border-b border-cyber-blue shadow-[0_0_15px_rgba(0,168,255,0.2)] z-50">
     <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -224,11 +223,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white">
-      {/* Updated Navbar with Original Glow & Colors */}
       <nav className="fixed top-0 w-full bg-[#1a1a1a]/95 backdrop-blur-md border-b border-cyber-blue shadow-[0_0_15px_rgba(0,168,255,0.2)] z-50">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          
-          {/* Logo Section */}
           <Link to="/" className="flex items-center gap-3 group">
             <img src={logo} alt="Logo" className="h-8 w-auto" />
             <span className="text-xl font-bold tracking-wider text-white">
@@ -236,7 +232,6 @@ export default function App() {
             </span>
           </Link>
 
-          {/* Desktop Menu - Restored vertical line and uppercase tracking */}
           <div className="hidden md:flex items-center h-full">
             <div className="h-8 w-px bg-cyber-blue/40 mx-6 shadow-[0_0_10px_rgba(0,168,255,0.4)]"></div>
             <div className="flex gap-8 font-medium text-sm">
@@ -245,7 +240,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Mobile Menu Button - Styled for the theme */}
           <div className="md:hidden flex items-center">
             <button onClick={toggleMenu} className="text-cyber-blue hover:text-white transition-colors focus:outline-none">
               {isOpen ? <X size={32} /> : <Menu size={32} />}
@@ -253,7 +247,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Mobile Dropdown - Matching the dark theme and cyber-blue accents */}
         {isOpen && (
           <div className="md:hidden bg-[#1a1a1a] border-b border-cyber-blue/30 px-6 py-6 space-y-4 shadow-xl animate-in slide-in-from-top duration-200">
             <Link 
@@ -274,7 +267,6 @@ export default function App() {
         )}
       </nav>
 
-      {/* Main Content Area */}
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
