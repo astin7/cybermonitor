@@ -81,12 +81,8 @@ const Home = () => (
           <p className="text-gray-400 max-w-2xl mx-auto text-lg mb-12">
             Everything you need to monitor, secure, and optimize your machine in one lightweight package.
           </p>
-          
-          {/* --- NEW IMAGE SECTION START --- */}
           <div className="relative max-w-5xl mx-auto mb-20 group">
-            {/* Background Glow behind the image */}
             <div className="absolute -inset-1 bg-gradient-to-r from-cyber-blue/20 to-transparent blur-2xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
-            
             <div className="relative bg-[#1a1a1a] rounded-2xl border border-white/10 p-2 shadow-2xl">
                <img 
                 src={`${import.meta.env.BASE_URL}cybermonitor-dashboard.png`}
@@ -95,7 +91,6 @@ const Home = () => (
               />
             </div>
           </div>
-          {/* --- NEW IMAGE SECTION END --- */}
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
