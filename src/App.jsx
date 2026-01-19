@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useForm, ValidationError } from '@formspree/react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { Shield, Cpu, Activity, Mail, Download, CheckCircle, Zap, Layers, Crosshair } from 'lucide-react';
+import logo from './assets/cybermonitor-logo.ico';
 
 // --- CONFIGURATION ---
 const DOWNLOAD_LINK = "https://github.com/astin7/cybermonitor/releases/download/v1.0.0/CyberMonitor.zip";
@@ -15,7 +16,7 @@ const Navbar = () => (
     <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div className="flex items-center gap-6">
         <Link to="/" className="flex items-center gap-3 group">
-          <img src="/cybermonitor-logo.ico" alt="Logo" className="h-10 w-10 group-hover:drop-shadow-[0_0_15px_rgba(0,168,255,0.5)] transition" />
+          <img src={logo} alt="Logo" className="h-8 w-auto" />
           <span className="text-xl font-bold tracking-wider text-white">
             CYBER<span className="text-cyber-blue">MONITOR</span>
           </span>
@@ -205,17 +206,15 @@ const Footer = () => (
 
 export default function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col bg-[#0a0a0a]">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div className="min-h-screen flex flex-col bg-[#0a0a0a]">
+      <Navbar />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
