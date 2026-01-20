@@ -9,7 +9,7 @@ import {
 import logo from './assets/cybermonitor-logo.ico';
 
 // --- CONFIGURATION ---
-const DOWNLOAD_LINK = "https://github.com/astin7/cybermonitor-download/releases/download/1.0.0/CyberMonitor.exe";
+const DOWNLOAD_LINK = "https://github.com/astin7/cybermonitor-download/releases/download/1.0.0/CyberMonitor.zip";
 const FORMSPREE_ID = "mbddozwn";
 
 // --- COMPONENTS ---
